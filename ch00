@@ -14,6 +14,10 @@ print(''.join(list(reversed('stressed'))))
 
 'stressed'[::-1]
 
+##リストの文字列に対してもやってみる
+##リストの中の順番も、文字列の順番も反対にしたい
 x1 = ['abc','012','ABC']
 
-x1[::-1] for x1 in x1[::-1]
+##mapを使うことで解決
+##内包表記との使い分けってどうしてるんだろ。。。
+list(map(lambda i2:i2[::-1],[i1 for i1 in x1[::-1]]))
