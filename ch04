@@ -19,12 +19,11 @@ cond4 = list(map(lambda x:x-1,cond4_temp))
 
 ##if使う方
 result4 = {}
-for word4 in words4:
+for i,word4 in enumerate(words4,1):
     if(words4.index(word4) in cond4):
-        result4[word4[0]] = words4.index(word4) + 1
+        result4[word4[0]] = i
     else:
-        result4[word4[:2]] = words4.index(word4) + 1
-
+        result4[word4[:2]] = i
 print(result4)
 
 
@@ -32,11 +31,21 @@ print(result4)
 ##2値だからいいけど3値以上になった時にどうするかだよなー、
 
 result4 = {}
-for word4 in words4:
+for i,word4 in enumerate(words4,1):
     endChar = 2 - int(words4.index(word4) in cond4)
-    result4[word4[0:endChar]] = words4.index(word4) + 1
+    result4[word4[0:endChar]] = i
 
 print(result4)
+
+##はじめindexの取得を.indexでやってたけど、要素の被りは全然ありえると思ったのと記述を楽にするためにenumarateを使用した、すっきり
+testSentence4 = "Hi He Lied Hi"
+testWords4 = testSentence4.split(' ')
+
+for testWord4 in testWords4:
+    print(testWords4.index(testWord4))
+
+for i,testWord4 in enumerate(testWords4):
+    print(i)
 
 ##ちなみに速度を計測すると
 ##ifで分ける方      158 µs ± 5.53 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
