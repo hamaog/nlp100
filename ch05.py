@@ -12,7 +12,7 @@
 def wakati(sentence,sepType,sepValue=''):
     ##学習の分かりやすさのために引数を置き換えずchar/wordと直接書く、本番は絶対にしない
     if(sepType == 'char'):
-        return list(sentence5)
+        return list(sentence)
     elif(sepType == 'word'):
         return sentence.split(sepValue)
     ##if文の中でtryみたいなエラーの吐き出させ方を知りたい
@@ -22,7 +22,7 @@ def wakati(sentence,sepType,sepValue=''):
 ##任意で切った後にngramの処理
 ##リストに対して、任意数の単位で分割を行う
 def ngram(word_list,byN):
-    return [word_list[idx:idx+byN] for idx in range(len(word_list) - byN + 1)]
+    return [''.join(word_list[idx:idx+byN]) for idx in range(len(word_list) - byN + 1)]
 
 sentence5 = "I am an NLPer"
 
