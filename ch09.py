@@ -6,9 +6,8 @@ import random
 def typoglycemia(sentence9: str,sepValue=' '):
     words9 = sentence9.split(sepValue)
     words9_list = []
-    for i in range(len(words9)):
-        word9 = words9[i]
-        if len(words9[i]) <= 4:
+    for word9 in (words9):
+        if len(word9) <= 4:
             words9_list.append(word9)
         else:
             word9_mod = word9[0] + ''.join(random.sample(word9[1:-1],len(word9[1:-1]))) + word9[-1]
