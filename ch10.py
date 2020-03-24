@@ -8,8 +8,9 @@ def countLine(directoryName: str):
             count += 1
     return count
 
-fileName = '/Users/***/hightemp.txt'
+fileName = '/Users/hamaokigaizaburo/Downloads/hightemp.txt'
 countLine(fileName)
 
 #UNIXコマンドでの確認
-#wc -l /Users/***/hightemp.txt
+#ターミナルで実行、-lを付けなければ単語数やバイト数も表示される
+#wc -l /Users/hamaokigaizaburo/Downloads/hightemp.txt
