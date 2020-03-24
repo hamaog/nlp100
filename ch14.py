@@ -8,7 +8,6 @@ def file_ContGet(fileName: str,rowNum: int):
     return fileData[0:rowNum]
 
 directoryName = '/Users/***/hightemp.txt'
-rowNum = 9
 
 file_ContGet(directoryName,9)
 
