@@ -8,7 +8,7 @@ def file_merge(bef_file1: str,bef_file2: str,aft_file: str,sepValue: str):
     with open(bef_file2) as f:
         data2 = f.readlines()
 
-    data_merge = '\n'.join(['\t'.join([data11.strip(),data21.strip()]) for data11,data21 in zip(data1,data2)])
+    data_merge = ['{}\t{}\n'.format(data11.strip(),data21.strip()) for data11,data21 in zip(data1,data2)]
 
     with open(aft_file,'w') as f:
         f.write(data_merge)
