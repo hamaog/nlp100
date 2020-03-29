@@ -6,7 +6,7 @@ def file_ColumnSortDesc(fileName: str,columnNum: int):
         fileData = f.readlines()
     return sorted(fileData, key=lambda fileData: fileData.split('\t')[columnNum-1],reverse=True)
 
-directoryName = '/Users/hamaokigaizaburo/Downloads/hightemp.txt'
+directoryName = '/Users/***/hightemp.txt'
 file_ColumnSortDesc(directoryName,3)
 
 ##lambdaは無名関数として、使い回しをしない様なタイミングで使う
